@@ -107,7 +107,7 @@ function Start-LLamaConsole
 }
 
 <# Invoke test function #>
-function Test-LlamaCpp { Complete-Text "The life of a cyberpunk is" }
+function Test-LlamaCpp { Complete-Text "The life of a rogue AI is weird" }
 
 <# Test that a compiled LLAMA.CPP binary exists. Raise exception if not #>
 function Assert-LlamaCpp { if (!(Test-Path "$env:LLAMA_CPP")) { throw "Could not find llama.exe at path - $env:LLAMA_CPP"} }
