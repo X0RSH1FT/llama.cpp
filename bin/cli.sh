@@ -3,11 +3,11 @@
 #region Documentation
 : '
     SYNOPSIS
-        LLAMA.CPP Bash profile script
+        LLAMA.CPP Bash CLI script
 
     DESCRIPTION
         This script is loaded by Bash when the user profile is loaded.
-        Defines functions for interacting with the LLAMA.CPP executable.
+        Defines functions for invoking the LLAMA.CPP executable.
     
     NOTES
         Add source statement for this script to the user bash profile
@@ -18,20 +18,10 @@
                 . "<PATH_TO_THIS_SCRIPT>"
             fi
         Example -
-            if [ -f "$HOME/llama-cpp/bin/profile.sh" ]; then
-                . "$HOME/llama-cpp/bin/profile.sh"
+            if [ -f "$HOME/llama-cpp/bin/cli.sh" ]; then
+                . "$HOME/llama-cpp/bin/cli.sh"
             fi
 '
-#endregion
-
-#region Configuration
-
-# Import environment variables from env.sh if it exists
-ENV_SCRIPT="$(dirname "$(realpath "$0")")/env.sh"
-if [ -f "$ENV_SCRIPT" ]; then
-    . "$ENV_SCRIPT"
-fi
-
 #endregion
 
 #region Operations

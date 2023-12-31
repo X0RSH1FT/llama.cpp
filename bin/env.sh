@@ -3,10 +3,24 @@
 # Documentation
 : '
     SYNOPSIS
-        Environment configuration bash script for LLAMA.CPP
+        Environment configuration Bash script for LLAMA.CPP
 
     DESCRIPTION
-        Sets environment variables for the current user
+        This script is loaded by Bash when the user profile is loaded.
+        Defines environment variables for interacting with the LLAMA.CPP binary
+    
+    NOTES
+        Add source statement for this script to the user bash profile
+        Open profile script with command -
+            nano ~/.bashrc or nano ~/.bash_profile
+        Add source statement -
+            if [ -f "<PATH_TO_THIS_SCRIPT>" ]; then
+                . "<PATH_TO_THIS_SCRIPT>"
+            fi
+        Example -
+            if [ -f "$HOME/llama-cpp/bin/env.sh" ]; then
+                . "$HOME/llama-cpp/bin/env.sh"
+            fi
 '
 
 # Parameters
@@ -14,9 +28,6 @@ llama_cpp_project_path=${1:-}
 llama_cpp_binary_path=${2:-}
 llm_model_path=${3:-}
 llm_models_directory_path=${4:-}
-
-# Initialize
-echo "Loading environment - $0" >&2
 
 # Defaults
 DEFAULT_LLAMA_CPP_PROJECT_PATH="$HOME/llama-cpp"
