@@ -24,6 +24,16 @@
 '
 #endregion
 
+#region Configuration
+
+# Import environment variables from env.sh if it exists
+ENV_SCRIPT="$(dirname "$(realpath "$0")")/env.sh"
+if [ -f "$ENV_SCRIPT" ]; then
+    . "$ENV_SCRIPT"
+fi
+
+#endregion
+
 #region Operations
 
 # Print environment variables
