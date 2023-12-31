@@ -40,6 +40,7 @@ DEFAULT_LLM_MODEL_PATH="$DEFAULT_LLM_MODELS_DIRECTORY_PATH/dolphin-2_6-phi-2-GGU
 : ${llama_cpp_project_path:=$DEFAULT_LLAMA_CPP_PROJECT_PATH}
 : ${llama_cpp_binary_path:=$DEFAULT_LLAMA_CPP_BIN_PATH}
 : ${llm_model_path:=$DEFAULT_LLM_MODEL_PATH}
+: ${llm_models_directory_path:=$DEFAULT_LLM_MODELS_DIRECTORY_PATH}
 export LLAMA_CPP_PROJECT_PATH=$(realpath "$llama_cpp_project_path")
 export LLAMA_CPP_BIN=$(realpath "$llama_cpp_binary_path")
 export LLM_MODEL_DIRECTORY=$(realpath "$llm_models_directory_path")
