@@ -49,7 +49,7 @@ export LLM_MODEL_DIRECTORY=$(realpath "$llm_models_directory_path")
 export LLM_MODEL_PATH=$(realpath "$llm_model_path")
 
 # Log state
-echo "-- LLAMA.CPP environment variables --"
+echo "-- LLAMA.CPP environment --"
 echo "LLAMA_CPP_PROJECT_PATH = $LLAMA_CPP_PROJECT_PATH"
 echo "LLAMA_CPP_BIN = $LLAMA_CPP_BIN"
 echo "LLM_MODEL_DIRECTORY = $LLM_MODEL_DIRECTORY"
