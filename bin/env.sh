@@ -23,6 +23,8 @@
             fi
 '
 
+echo "Loading LLAMA.CPP environment..."
+
 # Parameters
 llama_cpp_project_path=${1:-}
 llama_cpp_binary_path=${2:-}
@@ -52,3 +54,4 @@ echo "LLAMA_CPP_PROJECT_PATH = $LLAMA_CPP_PROJECT_PATH"
 echo "LLAMA_CPP_BIN = $LLAMA_CPP_BIN"
 echo "LLM_MODEL_DIRECTORY = $LLM_MODEL_DIRECTORY"
 echo "LLM_MODEL_PATH = $LLM_MODEL_PATH"
+echo "--------------------------------------"
