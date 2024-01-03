@@ -19,7 +19,7 @@
 #>
 #endregion
 
-Set-StrictMode -Version 3.0
+Write-Host "Loading llama-cpp environment..." -ForegroundColor DarkMagenta
 
 #region Operations
 
