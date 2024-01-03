@@ -34,7 +34,7 @@ llm_models_directory_path=${4:-}
 # Defaults
 DEFAULT_LLAMA_CPP_PROJECT_PATH="$HOME/llama-cpp"
 DEFAULT_LLAMA_CPP_BIN_PATH="${DEFAULT_LLAMA_CPP_PROJECT_PATH}/build/bin/main"
-DEFAULT_LLM_MODELS_DIRECTORY_PATH="/data/llm"
+DEFAULT_LLM_MODELS_DIRECTORY_PATH="/srv/llm"
 DEFAULT_LLM_MODEL_PATH="$DEFAULT_LLM_MODELS_DIRECTORY_PATH/dolphin-2_6-phi-2-GGUF/dolphin-2_6-phi-2.Q4_K_M.gguf"
 
 # Apply configuration

@@ -46,6 +46,14 @@ build_llama_cpp()
     cd "$origin_dir"
 }
 
+# Deploy the LLAMA.CPP binary to the user local bin directory
+deploy_llama_bin()
+{
+    echo "Deploying LLAMA.CPP binary..."
+    assert_llama_cpp
+    sudo cp "$LLAMA_CPP_BIN" /usr/local/bin/llama -v
+}
+
 # Test that a compiled LLAMA.CPP binary exists. Exit script if not
 assert_llama_cpp()
 {
@@ -74,6 +82,9 @@ for arg in "$@"; do
         --build)
             build=true # Compile the executable
             ;;
+        --deploy)
+            deploy=true # Copy binary to local user bin directory
+            ;;
         *)
             echo "Unknown argument: $arg"
             exit 1
@@ -81,9 +92,14 @@ for arg in "$@"; do
     esac
 done
 
-# Execute build if requested
+# Execute compilation
 if [ "${build:-}" = true ]; then
     build_llama_cpp "$LLAMA_BUILD_DIR_PATH"
+fi
+
+# Deploy the binary
+if [ "${deploy:-}" = true ]; then
+    deploy_llama_bin
 fi
 
 #endregion
