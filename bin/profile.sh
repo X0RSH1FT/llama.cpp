@@ -3,7 +3,7 @@
 #region Documentation
 : '
     SYNOPSIS
-        LLAMA.CPP Bash CLI script
+        LLAMA.CPP Bash profile script
 
     DESCRIPTION
         This script is loaded by Bash when the user profile is loaded.
